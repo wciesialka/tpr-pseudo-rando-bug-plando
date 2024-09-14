@@ -42,10 +42,7 @@ def generate_pairings(items: List[ProgressionItem]) -> Dict[str, str]:
     remaining_checks: List[str] = CHECKS.copy()
     pairings: Dict[str, str] = {}
 
-    while (num_remaining_items := sum(item.quantity for item in remaining_items)) > 0:
-        if num_remaining_items > len(remaining_checks):
-            raise ValueError("There are more items than bugs in the pool! Fix this!")
-
+    while len(remaining_checks) > 0:
         # Choose random check/item pair
         check: str = choice(remaining_checks)
         item: ProgressionItem = choice(remaining_items)
