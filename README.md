@@ -22,7 +22,7 @@ in the repo directory.
 
 ### Running
 
-After installing, run `tprbugplando` or `python3 -m tprbugplando` with the following syntax:
+After installing, run `tprbugplando` or `python3 -m tprbugplando`.
 
 ## Authors
 
